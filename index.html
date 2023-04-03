@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Determinantes</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="btns-signos">
+        <button class="custom-btn btn-3" style="width: 30px;" title="Disminuir tamaño de la matriz" onclick="aumentar('-')"><span>-</span></button>
+        <button class="custom-btn btn-3" style="width: 30px;" title="Aumentar tamaño de la matriz" onclick="aumentar('+')"><span>+</span></button>
+        <button class="custom-btn btn-3" style="width: 30px;" title="Limpiar matriz" onclick="limpiarMatriz('+')"><span>🧹︎</span></button>
+    </div>
+
+    <!-- <div class="title-matriz"> -->
+        <h3 style="text-align: center;">Matriz <small id="fila"></small> x <small id="columna"></small></h3>
+    <!-- </div> -->
+
+    <div class="input-group">
+        
+        <div id="matriz_generada">
+
+        </div>
+    </div>
+
+    <div class="btn-operaciones">
+        <button class="custom-btn btn-3" onclick="calcularTranspuesta()"><span>Matriz Transpuesta</span></button>
+
+
+        <button class="custom-btn btn-3" onclick="calcularDeterminante()"><span>Determinante</span></button>
+
+        <div class="wrapper">
+            <button class="custom-btn btn-3" onclick="multiplicarPorN()">
+              <span>Multiplicar por </span>
+            </button>
+            <input class="input-1" id="exponente" type="text">
+        </div>
+
+        <div class="wrapper">
+            <button class="custom-btn btn-3" onclick="elevarMatriz()">
+              <span>Matriz elevada a</span>
+            </button>
+            <input class="input-1" id="exponente-1" type="text">
+        </div>
+
+        <button class="custom-btn btn-3" onclick="calcularInversa()"><span>Matriz Inversa</span></button>
+        <button class="custom-btn btn-3" onclick="rangoMatriz()"><span>Rango</span></button>
+    </div>
+
+    <div class="loader" id="loader"></div>
+
+    <div id="resultado">
+      
+    </div>
+
+    
+
+
+    <!-- SWEET ALERT 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.26/dist/sweetalert2.all.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
